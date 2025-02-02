@@ -1,0 +1,67 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    color: #3FC1FF;
+    position: fixed;
+    width: 100%;
+    background: transparent; /* Semi-transparent background */
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    -webkit-backdrop-filter: blur(5px); /* Ensure cross-browser support */
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navLinks li a {
+    color: #3FC1FF;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .menuIcon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .navLinks {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: rgb(0 0 0 / 82%); /* Semi-transparent background for mobile menu */
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: fit-content;
+      padding: 20px;
+      backdrop-filter: blur(10px); /* Apply blur to mobile menu */
+      -webkit-backdrop-filter: blur(10px); /* Cross-browser support */
+    }
+  
+    .menuIcon {
+      display: block;
+    }
+  
+    .navLinks.active {
+      display: flex;
+    }
+  }
+  

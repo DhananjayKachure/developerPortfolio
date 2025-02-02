@@ -41,7 +41,7 @@
   text-align: justify;
   opacity: 0;
   line-height: 2;
-  color: #7ffff5; 
+  color: #D1FFFF; 
   animation: fadeIn 2s forwards 2s; /* Delay to show after typing animation */
 }
 

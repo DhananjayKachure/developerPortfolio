@@ -15,15 +15,29 @@ export async function POST(req: Request) {
     },
   });
 
-  const mailOptions = {
+  // Email to yourself
+  const mailToSelf = {
     from: 'dhananjaykachure.dev@gmail.com', // Replace with your email
     to: 'dhananjaykachure.dev@gmail.com', // Replace with the email where you want to receive the form
     subject: `New Contact Form Submission from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
+  // Acknowledgment email to the person who contacted you
+  const mailToUser = {
+    from: 'dhananjaykachure.dev@gmail.com', // Replace with your email
+    to: email, // Send the email to the person who contacted you
+    subject: 'Thank You for Contacting Me!',
+    text: `Hi ${name},\n\nThank you for reaching out to me! I have received your message and will get back to you soon.\n\nBest regards,\nDhananjay`,
+  };
+
   try {
-    await transporter.sendMail(mailOptions);
+    // Send both emails
+    await Promise.all([
+      transporter.sendMail(mailToSelf),
+      transporter.sendMail(mailToUser),
+    ]);
+
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Error sending email:', error);

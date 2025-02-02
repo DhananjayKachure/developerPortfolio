@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { emailSvg, github, linkedinSvg } from './Icons'
+import { emailSvg, github, linkedinSvg } from './Icons';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +9,8 @@ const Contact = () => {
     email: '',
     message: '',
   });
+
+  const [tooltip, setTooltip] = useState({ visible: false, message: '', type: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,81 +28,93 @@ const Contact = () => {
 
     const data = await response.json();
     if (data.success) {
-      alert('Message sent successfully!');
+      setTooltip({ visible: true, message: 'Message sent successfully!', type: 'success' });
       setFormData({ name: '', email: '', message: '' });
     } else {
-      alert('There was an error. Please try again.');
+      setTooltip({ visible: true, message: 'There was an error. Please try again.', type: 'error' });
     }
+
+    // Hide the tooltip after 3 seconds
+    setTimeout(() => setTooltip({ visible: false, message: '', type: '' }), 3000);
   };
+
   return (
     <>
-    <section className='contactmain'>
+      <section className='contactmain'>
+        <div className="contact-me">
+          <h1 className="section-title">Contact Me</h1>
+          <p>If you have any questions, feel free to reach out!</p>
+          <div className='d-flex contact_link_main'>
+          <a
+              href="mailto:dhananjaysunil.kachure@gmail.com"
+              className="contact-link"
+            >
+          <p>
+            {emailSvg()}
+          </p>
 
-       <div className="contact-me">
-            <h1 className="section-title">Contact Me</h1>
-            <p>
-              If you want to collaborate or have any questions, feel free to reach out!
-            </p>
-            <p>
-              {emailSvg()}
-              <a
-                href="mailto:dhananjaysunil.kachure@gmail.com"
-                className="contact-link"
-              >
-                dhananjaysunil.kachure@gmail.com
-              </a>
-            </p>
-        <p>
-            {linkedinSvg()}
-        <a className="contact-link" href='https://www.linkedin.com/in/dhananjay-sunil-kachure'>
-        https://www.linkedin.com/in/dhananjay-sunil-kachure
-        </a>
-        </p>
-
-        <p>
-            {github()}
-            <a className="contact-link" href='https://github.com/DhananjayKachure'>
-            https://github.com/DhananjayKachure
             </a>
-        </p>
+            <a className="contact-link" href='https://www.linkedin.com/in/dhananjay-sunil-kachure'>
 
+          <p>
+            {linkedinSvg()}
+          </p>
+            </a>
+            <a className="contact-link" href='https://github.com/DhananjayKachure'>
+          <p>
+            {github()}
+          </p>
+            </a>
           </div>
+      
+        </div>
 
-        <form  className='contactForm' onSubmit={handleSubmit}>
-      <label htmlFor="name">Name</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
+        <form className='contactForm' onSubmit={handleSubmit}>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            placeholder='Your Name'
+            onChange={handleChange}
+            required
+          />
 
-      <label htmlFor="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder='Your Email Id'
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
 
-      <label htmlFor="message">Message</label>
-      <textarea
-        id="message"
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-      ></textarea>
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder='Your Message'
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
 
-      <button type="submit">Submit</button>
-    </form>
-    </section>
+          <button type="submit">Submit</button>
+        </form>
+        
+        {tooltip.visible && (
+          <div className={`tooltip ${tooltip.type}`}>
+            {tooltip.message}
+          </div>
+        )}
+      </section>
+
+     
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

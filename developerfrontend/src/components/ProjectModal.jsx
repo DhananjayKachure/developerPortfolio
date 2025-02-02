@@ -1,35 +1,38 @@
 import React from "react";
-import { animated } from "@react-spring/web";
+import styles from "@/styles/Projectmodal.module.css";
 
-import "../styles/Projectmodal.css";
-
-const ProjectModal = ({ style, closeModal, project }) => {
+const ProjectModal = ({ closeModal, project }) => {
   if (!project) return null; // Ensure project data exists before rendering
-console.log(project,'soppks');
-let bg="none"
-if(project.iframeLink==="https://www.dnaindia.com/"){
- bg ="white"
-}
+
+  let backgroundColor = "none";
+  if (project.iframeLink === "https://www.dnaindia.com/") {
+    backgroundColor = "white";
+  }
+
   return (
     <>
-      <animated.div style={style} className="modal">
-        {/* <h3 className="modal-title">{project.name}</h3> */}
-        <span className="modal-close-button" onClick={closeModal}>X</span>
-        <div className="modal-iframe-container" style={{background:bg}}>
+      {/* Modal Background */}
+      <div className={styles.modalBg} onClick={closeModal}></div>
+
+      {/* Modal Content */}
+      <div className={styles.modal}>
+        <button className={styles.modalCloseButton} onClick={closeModal}>
+          X
+        </button>
+        <div
+          className={styles.modalIframeContainer}
+          style={{ backgroundColor }}
+        >
           <iframe
             src={project.iframeLink} // Dynamically set the iframe source
             title={project.name}
             width="100%"
-            height="650px"
+            height="100%"
             style={{ border: "none" }}
             allowFullScreen
           ></iframe>
         </div>
-        {/* <p className="modal-description">{project.description}</p> */}
-        {/* <button className="modal-close-button" onClick={closeModal}>
-          Close
-        </button> */}
-      </animated.div>
+      </div>
     </>
   );
 };

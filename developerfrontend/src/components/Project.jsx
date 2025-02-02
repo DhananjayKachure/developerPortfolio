@@ -1,53 +1,47 @@
 'use client'
 import React, { useState } from "react";
-import { useTransition } from "@react-spring/web";
 import ProjectModal from "./ProjectModal";
-import { dnaSvg, rptSvg, weyyakSvg } from "./Icons";
+import Image from 'next/image';
 
 const Project = ({ project = "" }) => {
-  const [modalVisible, setModalVisible] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null); // To track the selected project for modal
-  const transitions = useTransition(modalVisible, {
-    from: { opacity: 0, transform: "translateY(-40px)" },
-    enter: { opacity: 1, transform: "translateY(0px)" },
-    leave: { opacity: 0, transform: "translateY(-40px)" },
-  });
+  const [modalVisible, setModalVisible] = useState(false); // Track modal visibility
 
   let projects = [];
   let projectTitle = "";
 
+  // Set the project data based on the "project" prop
   if (project === "client") {
     projectTitle = "Work Experience";
-
     projects = [
       {
         name: "ZeeNews",
-        iframeLink:"https://zeenews.india.com/",
-        image: dnaSvg(),
+        iframeLink: "https://zeenews.india.com/",
+        image: "/images/zeelogo.png",
         description:
-          "Developed the Zee News website using Next.js 14, optimizing server-side rendering to enhance performance and improve Core Web Vitals.Migrated legacy code, ensured error-free functionality, and delivered microsites for high-traffic events like the World Cup, elections, and the Olympics.",
+          "Developed the Zee News website with Next.js 14, optimizing SSR for performance and Core Web Vitals. Migrated legacy code and built microsites for high-traffic events like the World Cup, elections, and the Olympics.",
         link: "https://github.com/user/project1",
       },
       {
-        name: "DNA India",
-        iframeLink:"https://www.dnaindia.com/",
-        image: dnaSvg(),
+        name: "DNA INDIA",
+        iframeLink: "https://www.dnaindia.com/",
+        image: "/images/dnalogo.png",
         description:
-          "Developed the Zee News website using Next.js 14, optimizing server-side rendering to enhance performance and improve Core Web Vitals.Migrated legacy code, ensured error-free functionality, and delivered microsites for high-traffic events like the World Cup, elections, and the Olympics.",
+          "Migrated the DNA INDIA to Next.js 14, optimizing SSR for performance and Core Web Vitals. Refactored legacy code and built microsites for high-traffic events like the World Cup, elections, and the Olympics.",
         link: "https://github.com/user/project2",
       },
       {
         name: "Weyyak OTT",
-        iframeLink:"https://weyyak.com/en",
-        image: weyyakSvg(),
+        iframeLink: "https://weyyak.com/en",
+        image: "/images/weyyaklogo.png",
         description:
           "Developed the Weyyak OTT platform using React, implementing key OTT features such as the homepage, video detail pages, and video listing. Managed video functionality, including Continue Watching and personalized content based on user region. Delivered tailored experiences for subscribed, registered, and guest users, ensuring seamless content delivery and navigation.",
         link: "https://github.com/user/project2",
       },
       {
         name: "Remote Power Teams",
-        iframeLink:"https://remotepowerteams.com",
-        image: rptSvg(),
+        iframeLink: "https://remotepowerteams.com",
+        image: "/images/rptlogo.png",
         description:
           "Developed the front end of the RPT website, a dynamic job-seeking platform, using React.js to deliver a seamless and responsive user experience. Integrated features such as advanced job search, filtering, resume uploads, and personalized dashboards for both job seekers and employers.",
         link: "https://github.com/user/project2",
@@ -58,34 +52,34 @@ const Project = ({ project = "" }) => {
     projects = [
       {
         name: "ZeeNews",
-        iframeLink:"https://zeenews.india.com/",
-        image: dnaSvg(),
+        iframeLink: "https://zeenews.india.com/",
+        image: "/images/zeelogo.png",
         description:
-          "Developed the Zee News website using Next.js 14, optimizing server-side rendering to enhance performance and improve Core Web Vitals.Migrated legacy code, ensured error-free functionality, and delivered microsites for high-traffic events like the World Cup, elections, and the Olympics.",
+          "Developed the Zee News website using Next.js 14, optimizing server-side rendering to enhance performance and improve Core Web Vitals. Migrated legacy code, ensured error-free functionality, and delivered microsites for high-traffic events like the World Cup, elections, and the Olympics.",
         link: "https://github.com/user/project1",
       },
       {
         name: "DNA India",
-        iframeLink:"https://www.dnaindia.com/",
-        image: dnaSvg(),
+        iframeLink: "https://www.dnaindia.com/",
+        image: "/images/dnalogo.png",
         description:
-          "Developed the Zee News website using Next.js 14, optimizing server-side rendering to enhance performance and improve Core Web Vitals.Migrated legacy code, ensured error-free functionality, and delivered microsites for high-traffic events like the World Cup, elections, and the Olympics.",
+          "Developed the Zee News website using Next.js 14, optimizing server-side rendering to enhance performance and improve Core Web Vitals. Migrated legacy code, ensured error-free functionality, and delivered microsites for high-traffic events like the World Cup, elections, and the Olympics.",
         link: "https://github.com/user/project2",
       },
       {
         name: "Weyyak OTT",
-        iframeLink:"https://weyyak.com/en",
-        image: weyyakSvg(),
+        iframeLink: "https://weyyak.com/en",
+        image: "/images/weyyaklogo.png",
         description:
-          "Developed the Weyyak OTT platform using React, implementing key OTT features such as the homepage, video detail pages, and video listing. Managed video functionality, including Continue Watching and personalized content based on user region. Delivered tailored experiences for subscribed, registered, and guest users, ensuring seamless content delivery and navigation.",
+          "Developed the Weyyak OTT platform using React, building key features like the homepage, video pages, and personalized content. Managed video functionality, including Continue Watching and regional personalization, for a seamless user experience",
         link: "https://github.com/user/project2",
       },
       {
         name: "Remote Power Teams",
-        iframeLink:"https://remotepowerteams.com",
-        image: rptSvg(),
+        iframeLink: "https://remotepowerteams.com",
+        image: "/images/rptlogo.png",
         description:
-          "Developed the front end of the RPT website, a dynamic job-seeking platform, using React.js to deliver a seamless and responsive user experience. Integrated features such as advanced job search, filtering, resume uploads, and personalized dashboards for both job seekers and employers.",
+          "Built the RPT job-seeking platform's front end with React.js, implementing advanced search, filtering, resume uploads, and personalized dashboards for job seekers and employers.",
         link: "https://github.com/user/project2",
       },
     ];
@@ -102,35 +96,22 @@ const Project = ({ project = "" }) => {
       <div className="projects-container">
         {projects.map((project, index) => (
           <div key={index} className="project-item">
-
-            {project.image}
+            <Image src={project.image} width={100} height={100} alt="icon" />
             <h3>{project.name}</h3>
-            {/* <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              View Project
-            </a> */}
-            <button onClick={() => handleProjectClick(project)}>
+            <p>{project?.description||""}</p>
+            <div className="project-link" onClick={() => handleProjectClick(project)}>
               Show Details
-            </button>
+            </div>
           </div>
         ))}
       </div>
 
       {/* Render Modal if modalVisible is true */}
-      {transitions(
-        (style, item) =>
-          item && (
-            
-            <ProjectModal
-              style={style}
-              closeModal={() => setModalVisible(false)}
-              project={selectedProject} // Pass the selected project to the modal
-            />
-          )
+      {modalVisible && (
+        <ProjectModal
+          closeModal={() => setModalVisible(false)} // Close modal function
+          project={selectedProject} // Pass the selected project to the modal
+        />
       )}
     </div>
   );

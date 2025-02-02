@@ -17,7 +17,7 @@ const Skills = () => {
     ];
     
   return (
-    <div className="skills-section dynamic-container ">
+    <div className="skills-section  ">
     <h1 className="section-title">Skills</h1>
     <div className="skills-container">
       {skills.map((skill, index) => (
