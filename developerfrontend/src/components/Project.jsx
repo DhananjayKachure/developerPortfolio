@@ -92,7 +92,7 @@ const Project = ({ project = "" }) => {
 
   return (
     <div className="projects-section">
-      <h1 className="section-title">{projectTitle}</h1>
+      <h2 className="section-title">{projectTitle}</h2>
       <div className="projects-container">
         {projects.map((project, index) => (
           <div key={index} className="project-item">

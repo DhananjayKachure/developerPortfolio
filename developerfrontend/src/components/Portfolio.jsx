@@ -25,9 +25,9 @@ import {
 
 
 const openSource = [
-  { name: "Go Lang", description: "Explore the fundamentals of Go.", link: "https://github.com/DhananjayKachure/go_learn",cansee:true },
+  {name:"React", description: "Dive into concepts of React JS", link:"https://github.com/DhananjayKachure/React_learn",cansee:true},
   { name: "Node.js", description: "Dive into Node.js basics.", link: "https://github.com/DhananjayKachure/Nodejs",cansee:true },
-  {name:"Dev connect", description: "site where developer can connect", link:"https://github.com/DhananjayKachure",cansee:false},
+  { name: "Go Lang", description: "Explore the fundamentals of Go.", link: "https://github.com/DhananjayKachure/go_learn",cansee:true },
   {name:"WisdomINsight", description: "news site for Knowledge", link:"https://github.com/DhananjayKachure",cansee:false}
 ];
 
@@ -133,7 +133,7 @@ const Portfolio = () => {
       </div> */}
       <div id="projects" className="page dynamic-container" >
         <div className="open-source-section">
-          <h1 className="section-title">Projects / Open Source</h1>
+          <h2 className="section-title">Projects / Open Source</h2>
           <div className="projects-container">
             {openSource.map((project, index) => (
               <div key={index} className="project-item">

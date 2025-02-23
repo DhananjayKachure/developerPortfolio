@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/Skills.css"
-import { HtmlSvg, CssSvg, JavaScriptSvg, TypeScriptSvg, NodeJsSvg, ReactSvg, ExpressSvg, NextjsSvg, ViteSvg } from './Icons';
+import { HtmlSvg, CssSvg, JavaScriptSvg, TypeScriptSvg, NodeJsSvg, ReactSvg, ExpressSvg, NextjsSvg, ViteSvg, GoSvg } from './Icons';
 const Skills = () => {
     const iconSize = 70
     const skills = [
@@ -13,12 +13,13 @@ const Skills = () => {
       {name: "Express Js", icon:ExpressSvg(iconSize)},
       {name: "Next JS", icon:NextjsSvg(iconSize)},
       {name: "Vite", icon:ViteSvg(iconSize)},
+      {name:"Go Lang", icon:GoSvg(iconSize)}
 
     ];
     
   return (
     <div className="skills-section  ">
-    <h1 className="section-title">Skills</h1>
+    <h2 className="section-title">Skills</h2>
     <div className="skills-container">
       {skills.map((skill, index) => (
         <div key={index} className="skill-item">

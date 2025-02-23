@@ -46,7 +46,7 @@ const GameSection = () => {
   return (
     <>
       <div className={PlayCss.openSourceSection}>
-        <h1 className={PlayCss.sectionTitle}>Play Games</h1>
+        <h2 className={PlayCss.sectionTitle}>Play Games</h2>
         <div className={PlayCss.projectsContainer}>
           {playArray.map((game) => (
             <div key={game.id} className={PlayCss.projectItem}>

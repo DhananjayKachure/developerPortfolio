@@ -42,7 +42,7 @@ const Contact = () => {
     <>
       <section className='contactmain'>
         <div className="contact-me">
-          <h1 className="section-title">Contact Me</h1>
+          <h2 className="section-title">Contact Me</h2>
           <p>If you have any questions, feel free to reach out!</p>
           <div className='d-flex contact_link_main'>
           <a
