@@ -102,7 +102,7 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Dhananjay Sunil Kachure",
               "jobTitle": "Software Engineer",
-              "image":"https://media.licdn.com/dms/image/v2/D5603AQFsai-ApAjHZA/profile-displayphoto-shrink_400_400/B56ZPU5fUMGkAg-/0/1734443661988?e=1746057600&v=beta&t=raXtI9W9rc2EnMzTK_qxemKtkPboU1sZO88bhyrO12w",
+              "image":"",
               "url": "https://www.linkedin.com/in/dhananjay-sunil-kachure/",
               "email": "mailto:dhananjaysunil.kachure@gmail.com",
               "sameAs": [
