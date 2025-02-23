@@ -69,7 +69,7 @@ const Contact = () => {
       
         </div>
 
-        <form className='contactForm' onSubmit={handleSubmit}>
+        {/* <form className='contactForm' onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -103,7 +103,7 @@ const Contact = () => {
           ></textarea>
 
           <button type="submit">Submit</button>
-        </form>
+        </form> */}
         
         {tooltip.visible && (
           <div className={`tooltip ${tooltip.type}`}>
