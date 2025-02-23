@@ -104,12 +104,12 @@ const Contact = () => {
 
           <button type="submit">Submit</button>
         </form> */}
-        
+{/*         
         {tooltip.visible && (
           <div className={`tooltip ${tooltip.type}`}>
             {tooltip.message}
           </div>
-        )}
+        )} */}
       </section>
 
      
