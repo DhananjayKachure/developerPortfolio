@@ -19,15 +19,15 @@ const Project = ({ project = "" }) => {
         iframeLink: "https://zeenews.india.com/",
         image: "/images/zeelogo.png",
         description:
-          "Developed the Zee News website with Next.js 14, optimizing SSR for performance and Core Web Vitals. Migrated legacy code and built microsites for high-traffic events like the World Cup, elections, and the Olympics.",
+          "Making news websites faster than breaking news itself! Optimized performance, fixed legacy code, and built microsites for events that make the internet lose its mind.",
         link: "https://github.com/user/project1",
       },
       {
-        name: "DNA INDIA",
+        name: "DNA India",
         iframeLink: "https://www.dnaindia.com/",
         image: "/images/dnalogo.png",
         description:
-          "Migrated the DNA INDIA to Next.js 14, optimizing SSR for performance and Core Web Vitals. Refactored legacy code and built microsites for high-traffic events like the World Cup, elections, and the Olympics.",
+          "News so smooth, it loads before you blink! Revamped the site, improved Core Web Vitals, and ensured zero hiccups during high-traffic madness.",
         link: "https://github.com/user/project2",
       },
       {
@@ -35,7 +35,7 @@ const Project = ({ project = "" }) => {
         iframeLink: "https://weyyak.com/en",
         image: "/images/weyyaklogo.png",
         description:
-          "Developed the Weyyak OTT platform using React, implementing key OTT features such as the homepage, video detail pages, and video listing. Managed video functionality, including Continue Watching and personalized content based on user region. Delivered tailored experiences for subscribed, registered, and guest users, ensuring seamless content delivery and navigation.",
+          `Because "just one more episode" is a lifestyle! Developed video pages, personalized content, and seamless streaming so your binge sessions never suffer.`,
         link: "https://github.com/user/project2",
       },
       {
@@ -43,7 +43,7 @@ const Project = ({ project = "" }) => {
         iframeLink: "https://remotepowerteams.com",
         image: "/images/rptlogo.png",
         description:
-          "Developed the front end of the RPT website, a dynamic job-seeking platform, using React.js to deliver a seamless and responsive user experience. Integrated features such as advanced job search, filtering, resume uploads, and personalized dashboards for both job seekers and employers.",
+          "Job hunting, but with fewer headaches! Built a dynamic job platform with search filters, resume uploads, and dashboards to make hiring (or getting hired) a breeze.",
         link: "https://github.com/user/project2",
       },
     ];
@@ -55,7 +55,7 @@ const Project = ({ project = "" }) => {
         iframeLink: "https://zeenews.india.com/",
         image: "/images/zeelogo.png",
         description:
-          "Developed the Zee News website using Next.js 14, optimizing server-side rendering to enhance performance and improve Core Web Vitals. Migrated legacy code, ensured error-free functionality, and delivered microsites for high-traffic events like the World Cup, elections, and the Olympics.",
+          "Making news websites faster than breaking news itself! Optimized performance, fixed legacy code, and built microsites for events that make the internet lose its mind.",
         link: "https://github.com/user/project1",
       },
       {
@@ -63,7 +63,7 @@ const Project = ({ project = "" }) => {
         iframeLink: "https://www.dnaindia.com/",
         image: "/images/dnalogo.png",
         description:
-          "Developed the Zee News website using Next.js 14, optimizing server-side rendering to enhance performance and improve Core Web Vitals. Migrated legacy code, ensured error-free functionality, and delivered microsites for high-traffic events like the World Cup, elections, and the Olympics.",
+          "News so smooth, it loads before you blink! Revamped the site, improved Core Web Vitals, and ensured zero hiccups during high-traffic madness.",
         link: "https://github.com/user/project2",
       },
       {
@@ -71,7 +71,7 @@ const Project = ({ project = "" }) => {
         iframeLink: "https://weyyak.com/en",
         image: "/images/weyyaklogo.png",
         description:
-          "Developed the Weyyak OTT platform using React, building key features like the homepage, video pages, and personalized content. Managed video functionality, including Continue Watching and regional personalization, for a seamless user experience",
+          `Because "just one more episode" is a lifestyle! Developed video pages, personalized content, and seamless streaming so your binge sessions never suffer.`,
         link: "https://github.com/user/project2",
       },
       {
@@ -79,7 +79,7 @@ const Project = ({ project = "" }) => {
         iframeLink: "https://remotepowerteams.com",
         image: "/images/rptlogo.png",
         description:
-          "Built the RPT job-seeking platform's front end with React.js, implementing advanced search, filtering, resume uploads, and personalized dashboards for job seekers and employers.",
+          "Job hunting, but with fewer headaches! Built a dynamic job platform with search filters, resume uploads, and dashboards to make hiring (or getting hired) a breeze.",
         link: "https://github.com/user/project2",
       },
     ];
@@ -93,6 +93,7 @@ const Project = ({ project = "" }) => {
   return (
     <div className="projects-section">
       <h2 className="section-title">{projectTitle}</h2>
+      <p className="subtitle">Proof that I actually do stuff ! Click  <strong>‘Show Details’</strong></p>
       <div className="projects-container">
         {projects.map((project, index) => (
           <div key={index} className="project-item">

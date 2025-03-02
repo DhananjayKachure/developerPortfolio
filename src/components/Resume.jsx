@@ -11,7 +11,7 @@ const Resume = () => {
       <h2 className="section-title">Resume</h2>
       <div className="projects-container">  
           <div className="project-item">
-            <h3>click to view resume</h3>
+            <h3>All my skills, neatly packed—take a peek!</h3>
            <a  href={resume.iframeLink} 
            target="_blank" 
           rel="noopener noreferrer"

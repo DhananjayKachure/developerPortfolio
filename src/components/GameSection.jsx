@@ -47,6 +47,7 @@ const GameSection = () => {
     <>
       <div className={PlayCss.openSourceSection}>
         <h2 className={PlayCss.sectionTitle}>Play Games</h2>
+        <p className={PlayCss.sectionsubtitle}>Click  <strong>‘Play’</strong>—exploring my portfolio can wait!</p>
         <div className={PlayCss.projectsContainer}>
           {playArray.map((game) => (
             <div key={game.id} className={PlayCss.projectItem}>

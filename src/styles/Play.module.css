@@ -146,7 +146,13 @@
   .gameContainer .button:disabled {
     background-color: #767373;
   }
-  
+  .sectionsubtitle{
+    color: #fff;
+    text-align: center;
+  }
+  .sectionsubtitle strong{
+    color: #3FC1FF;
+  }
   /* Tic Tac Toe */
   .board {
     display: grid;
