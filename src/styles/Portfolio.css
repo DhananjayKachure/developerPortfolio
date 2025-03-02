@@ -154,6 +154,13 @@ object-fit: contain;
   color: green;
   margin-top: 1rem;
 }
+.subtitle{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.subtitle strong{
+  color: #3FC1FF;
+}
 
 /* Wave Animation */
 @keyframes wave {
@@ -227,6 +234,41 @@ object-fit: contain;
   gap: 10px;
   margin-top: 10px;
 }
+.messagetip {
+  border-radius: 5px;
+  border: 2px solid #3FC1FF;
+  bottom: 80px;
+  color: #D1FFFF;
+  box-shadow: 1px 1px 2px #3FC1FF;
+  font-size: 16px;
+  height: auto;
+  opacity: 0.9;
+  left: 20px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  width: 275px;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.messagetip:before, .messagetip:after {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #3FC1FF;
+  bottom: -10px;
+  content: '';
+  height: 0;
+  left: 26%;
+  margin-left: -69px;
+  position: absolute;
+  width: 0;
+}
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects-container {
