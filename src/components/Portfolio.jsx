@@ -23,7 +23,7 @@ import {
 
 const openSource = [
   { name: "React", description: "Dive into concepts of React JS", link: "https://github.com/DhananjayKachure/React_learn", cansee: true },
-  { name: "Node.js", description: "Dive into Node.js basics.", link: "https://github.com/DhananjayKachure/Nodejs", cansee: true },
+  // { name: "Node.js", description: "Dive into Node.js basics.", link: "https://github.com/DhananjayKachure/Nodejs", cansee: true },
   { name: "Go Lang", description: "Explore the fundamentals of Go.", link: "https://github.com/DhananjayKachure/go_learn", cansee: true },
   { name: "WisdomINsight", description: "News site for knowledge", link: "https://github.com/DhananjayKachure", cansee: false }
 ];
